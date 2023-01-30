@@ -1,0 +1,246 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+  background-color: #333;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+/*for descktop devices*/
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%; border-style: none;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+main {
+  background-color: #333;
+}
+/*
+footer {
+  position: sticky;
+  top: 100%;
+  background-color: rgba(3, 3, 3, 0.1);
+}
+*/
+#navigation > ul, button > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #111;
+  position: sticky;
+  top: 0;
+}
+
+#navigation > ul > li {
+  float: left;
+}
+
+button > ul > li{
+  float: none;
+  display: list-item;
+  position: relative;
+}
+
+#navigation > ul > li a, button > ul > li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+#navigation > ul > li a:hover {
+  background-color: #333;
+  border-radius:15px 15px 0 0;
+}
+
+#navigation > ul > li.active {
+  background-color: #04AA6D;
+}
+
+input::placeholder{
+  color: lightgreen;
+}
+
+#limlogo, .logo{
+	width: 50px;
+	height: auto;
+	border-radius: 50%;
+	margin-left: 10px;
+}
+
+input:required::before{
+  content: '*';
+}
+
+.limlogo{
+  width: 10vw;
+  height: auto;
+	border-radius: 50%;
+}
+
+#header{
+	display: inline-flex;
+	flex-direction: row;
+  align-items: flex-end;
+  background-color: #111;
+	width: 100%;
+  padding: 0;
+  margin: 0;
+  position: sticky;
+  top: 0;
+	
+}
+#navigation{
+	margin-left: 20%;
+}
+
+form, .view{
+  border-radius: 2vw;
+  /*background-color: rgba(250, 248, 248, 0.507);*/
+  background-color: rgba(3, 3, 3, 0.507);
+  padding: 2vw;
+  position:relative;
+-webkit-box-shadow:0 5px 9px rgba(230, 221, 221, 0.3), 0 0 40px rgba(245, 192, 192, 0.1) inset;
+-moz-box-shadow:0 5px 9px rgba(218, 204, 204, 0.3), 0 0 40px rgba(247, 238, 238, 0.1) inset;
+box-shadow:0 5px 9px rgba(245, 240, 240, 0.3), 0 0 40px rgba(255, 255, 255, 0.1) inset;
+}
+
+form:before, form:after
+{
+content:"";
+position:absolute;
+z-index:-1;
+-webkit-box-shadow:0 0 20px rgba(247, 242, 242, 0.8);
+-moz-box-shadow:0 0 20px rgba(241, 237, 237, 0.8);
+box-shadow:0 0 20px rgba(245, 241, 241, 0.8);
+top:50%;
+bottom:0;
+left:10px;
+}
+
+form > table, .view > table, table{
+  text-align: left;
+  width: 90%;
+}
+
+form > table input {
+  width: 100%;
+  border-radius: 0.53vw;
+ 
+  background-color: rgba(250, 248, 248, 0.3);
+}
+
+table:not(.no) tr:nth-child(even){
+  background-color: rgba(255, 255, 255, 0.4);
+  color: black;
+  border-radius: 0.53vw;
+}
+
+form > table input[type=submit]{
+  width: 50%;
+  background-color: deepskyblue;
+}
+
+input[type="radio"], input[type="checkbox"]{
+  width: fit-content;
+}
+
+form > table > th, .view > table > th, table > th{
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  width: 20%;
+}
+
+.errormsg{
+  color:red;
+}
+
+
+@media only screen and (max-width: 600px){
+/* For mobile phones: */ 
+.col-sm-1 {width: 8.33%;}
+.col-sm-2 {width: 16.66%;}
+.col-sm-3 {width: 25%;}
+.col-sm-4 {width: 33.33%;}
+.col-sm-5 {width: 41.66%;}
+.col-sm-6 {width: 50%; border-style: none;}
+.col-sm-7 {width: 58.33%;}
+.col-sm-8 {width: 66.66%;}
+.col-sm-9 {width: 75%;}
+.col-sm-10 {width: 83.33%;}
+.col-sm-11 {width: 91.66%;}
+.col-sm-12 {width: 100%;}
+/*
+[class*="col-"] {
+  width: 100%;
+}
+*/
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  /*border: 1px solid red;*/
+}
+
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  /*border: 1px solid red;*/
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/**************************************************************************************/
+article .framer{
+  border-radius: 1vw;
+  background-color: deepskyblue;
+}
+
+.cont{
+  padding: 1vw;
+}
+
+.dh {
+  background-color: skyblue;
+  display: block;
+  padding: 0.1vw;
+  border-top-right-radius: 1vw;
+  border-top-left-radius: 1vw;
+}
+
+.dhv{
+  background-color: darkturquoise;
+  display: block;
+  padding: 0.1vw;
+}
+
+button, input[type=submit]{
+  border-radius: 6em;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+
+}
